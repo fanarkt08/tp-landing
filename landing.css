@@ -1,0 +1,371 @@
+h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 25% */
+    letter-spacing: 0.1px;
+}
+
+h2 {
+    color: #FFF;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;  /* Stroke width */
+    -webkit-text-stroke-color: #000; /* Stroke color */
+    font-family: sans-serif;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 2px; 
+}
+
+h3 {
+    color: #DFFD00;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 66.667% */
+    letter-spacing: 2px;
+}
+
+h4 {
+    color : #DFFD00;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: var(--Label-Large-Tracking, 0.1px);
+}
+
+h5 {
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.1px;
+}
+
+h6{
+    color: #000;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 200% */
+    letter-spacing: 2px;
+}
+
+body {
+    width: 100vw; /* Ensure body matches the viewport width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Ensure body matches the viewport width */
+}
+
+#navigation {
+    display: flex;
+    width: 100vw;  /* Full viewport width */
+    height: 83px;  /* Fixed height for the navigation bar */
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background: #000;
+    padding-left: 5px;
+    padding-right: 5px;
+    align-items: center; /* Vertically center the items inside #navigation */
+    justify-content: space-between; /* Space out Title and Options */
+    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+main{
+    background-color: #000;
+}
+/* Title container styles */
+#Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    flex-shrink: 0;  /* Prevent shrinking */
+    margin-right: auto;  /* Push Title to the left */
+    height: 100%; /* Ensure Title takes 100% height of the navigation */
+}
+
+/* Ensure #Options stretches to full height of the navigation bar */
+#Options {
+    display: flex;
+    justify-content: flex-end; /* Align options to the right */
+    align-items: center; /* Vertically center items within the Options container */
+    gap: 10px;
+    height: 100%;  /* Full height of parent container */
+    padding-right: 89px; /* Optional: adjust padding for spacing */
+}
+
+/* Make sure #list-of-events stretches to 100% height of #Options */
+#list-of-events {
+    background-color: #DFFD00; /* Bright highlight */
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px; /* Adjust horizontal padding */
+    height: 100%; /* Stretch to full navigation height */
+    box-sizing: border-box;
+    border-left: 4px solid #DFFD00;
+    border-right: 4px solid #DFFD00;
+}
+/* Navigation bar styles */
+#navigation-bar {
+    display: flex;
+    height: 100%; /* Ensure navigation bar takes up full height */
+    justify-content: flex-start; /* Align the navigation items */
+    align-items: center; /* Vertically center the items */
+    gap: 10px; /* Add space between navigation items */
+    overflow: hidden; /* Prevent overflow */
+}
+/* Optional: Specific styles for the title elements */
+#top-title {
+    margin: 0px;
+    color: #DFFD00;
+}
+
+#bot-title {
+    margin: 0px;
+    color: #FFFFFF;
+}
+
+#image-background {
+    position: relative; /* Parent positioning */
+    width: 100%;
+    height: auto; /* Adapt height to the content */
+    margin-bottom: 100px;
+}
+
+#title-img {
+    width: 100vw; /* Full width */
+    height: calc(100vw / 3.23); /* Aspect ratio for the image */
+    object-fit: cover;
+}
+
+#title-site {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    text-align: right;
+    color: #FFF;
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    z-index: 2; /* Keep it above other elements */
+}
+
+#title-site span {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Section Below Image Background */
+#activities {
+    position: relative; /* Stacks this section below the image */
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #000; /* Match background for consistency */
+    box-sizing: border-box;
+    z-index: 1; /* Ensure it doesn't interfere with the title-site */
+    margin-top: -50px; /* Adjust overlap nicely if needed */
+}
+
+/* Title of Activities Section */
+#activities-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 0 auto 30px auto;
+    color: #FFF;
+    z-index: 1; /* Prevents overlapping */
+    margin-bottom: 100px;
+}
+
+/* Activities List Section */
+#activities-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 100px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    gap: 10px; /* Add uniform spacing between child elements */
+    background-color: #222; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    height: 500pox;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.activity:hover {
+    transform: translateY(-10px);
+}
+
+/* Image Section */
+.activity-img {
+    width: 100%;
+    height: 43%; /* Relative height */
+    object-fit: cover;
+    margin: 0; /* Remove margin */
+}
+
+/* Title Section */
+.activity-name {
+    font-weight: bold;
+    color: #DFFD00;
+    font-size: 18px;
+    margin: 0; /* Remove unnecessary margin */
+}
+
+/* Text Section */
+.activity-text {
+    color: #FFF;
+    font-size: 14px;
+    align-content: center;
+    height: 35%;
+    margin: 0; /* Ensure no extra spacing */
+}
+
+/* Button Section */
+.activity-button {
+    display: flex;
+    margin-top: auto;
+}
+
+.button-fill {
+    margin: 0px;
+    background-color: #DFFD00;
+    color: #000;
+    padding: 2px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-fill:hover {
+    background-color: #c6e700;
+}
+
+footer {
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    padding: 0 15px;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers the content */
+    color: #000;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box; /* Ensures padding doesn’t affect height */
+}
+
+#Logo {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    gap: 0px;
+    justify-content: space-evenly; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    height: 100%; /* Ensures the content spans the entire height */
+    width: 100%;
+    text-align: center;
+    margin: 0; /* Adjust margins */
+}
+
+#Social-Network {
+    display: flex;
+    flex-direction: row; /* Stack content vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    height: 100%; /* Ensures the content spans the entire height */
+    width: 100%;
+}
+
+#footer-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex-grow: 0;
+}
+
+#top-logo {
+    color: #DFFD00;  /* Yellow color */
+    font-weight: 500;
+    text-align: center;
+    margin: 0px;
+}
+
+#bot-logo {
+    color: #000; 
+    font-weight: 500;
+    margin: 0px;
+}
+
+#Adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex-grow: 0;
+}
+
+.adress-option {
+    align-self: center;
+    margin: 0px;
+}
+
+.footer-option {
+    align-self: center;
+    margin: 0px;
+}
+
+#Social-Network {
+    gap: 65px;
+    margin: 0; /* Remove extra margin */
+}
+
+#Social-Network .social-img {
+    width: 100%;
+    height: 60%;
+    object-fit: contain;
+    cursor: pointer;
+}
